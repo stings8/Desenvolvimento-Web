@@ -1,12 +1,14 @@
 package com.ufc.br.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity(name = "usuario")
@@ -20,16 +22,25 @@ public class Usuario implements Serializable{
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
 	private long id;
 	
-	@Column(nullable = false, length = 50)
+	@OneToMany
+	private List<Produto>produtos;
+	
+	@Column
 	private String nome;
 	
-	@Column(nullable = false, length = 50)
+	@Column
 	private String email;
 	
-	@Column(nullable = false, length = 10)
+	@Column
 	private String senha;
 	
-	
+
+	public Usuario(String nome, String email, String senha) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+	}
 	public long getId() {
 		return id;
 	}

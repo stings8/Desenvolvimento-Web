@@ -15,9 +15,14 @@ body {
 }
 
 header {
-    height: 145px;
+    height: 160px;
     width: 100%;
-    background-color: rgba(94, 41, 154, .8);
+    background-attachment: fixed;
+    background-image: linear-gradient(
+         to top right,
+         rgb(37, 5, 63),
+         rgb(105, 4, 100)
+     );
 }
 
 header .container {
@@ -115,22 +120,13 @@ button, input, optgroup, select, textarea {
 }
 
 .resto {
-    padding-top: 200px;
+    padding-top: 100px;
     
-}
-
-.resto {
-    background-size: cover;
-    background-attachment: fixed;
-   background-image: linear-gradient(
-        to top right,
-        purple,
-        tomato
-    );
 }
 
 .secundario {
     margin-top: 40px;
+    margin-bottom: 70px;
 }
 
 .secundario .central h2 {
@@ -148,7 +144,11 @@ button, input, optgroup, select, textarea {
 }
 
 .page-footer {
-    padding-top: 100px;
-    margin-top: 20px;
+    background-attachment: fixed;
+    background-image: linear-gradient(
+         to top right,
+         rgb(59, 4, 59),
+         rgb(221, 69, 42)
+     );
 }
 

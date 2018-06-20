@@ -18,18 +18,23 @@ public class UsuarioService {
 		return repository.findAll();
 		
 	}
-	/*
-	public Usuario findOne(Long id) {
-		return repository.findOne(id);
-	}*/
+	
+	public Usuario getOne (Long id) {
+		return repository.getOne(id);
+	}
+	
+	public List<Usuario> findByNome(String nome) {
+		return repository.findByNome(nome);
+	}
 	
 	public Usuario save(Usuario usuario) {
 		return repository.saveAndFlush(usuario);
 	}
 	
-	/*public void delete(Long id) {
-		repository.delete(entity);
-	}*/
+	public void delete(Long id) {
+		Usuario user = getOne(id);
+		repository.delete(user);
+	}
 	
 	
 	
