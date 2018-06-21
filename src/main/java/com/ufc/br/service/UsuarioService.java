@@ -23,9 +23,9 @@ public class UsuarioService {
 		return repository.getOne(id);
 	}
 	
-	public List<Usuario> findByNome(String nome) {
+	/*public List<Usuario> findByNome(String nome) {
 		return repository.findByNome(nome);
-	}
+	}*/
 	
 	public Usuario save(Usuario usuario) {
 		return repository.saveAndFlush(usuario);

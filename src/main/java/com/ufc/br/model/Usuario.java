@@ -22,16 +22,16 @@ public class Usuario implements Serializable{
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
 	private long id;
 	
-	@OneToMany
-	private List<Produto>produtos;
+	//@OneToMany
+	//private List<Produto>produtos;
 	
-	@Column
+	@Column(name = "nome" )
 	private String nome;
 	
-	@Column
+	@Column(name = "email")
 	private String email;
 	
-	@Column
+	@Column(name = "senha")
 	private String senha;
 	
 

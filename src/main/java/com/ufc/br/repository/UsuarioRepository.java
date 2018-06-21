@@ -10,7 +10,7 @@ import com.ufc.br.model.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 	
-	List<Usuario> findByNome(String nome);
+	//List<Usuario> findByNome(String nome);
 
 	
 }

@@ -35,6 +35,7 @@ public class Produto implements Serializable {
 	@Column(name = "valor", nullable = false, length = 12)
 	private float valor;
 	
+	public Produto() {}
 	
 	public Produto(String nome, String tipo, String descr, String fabricante, float valor) {
 		super();
